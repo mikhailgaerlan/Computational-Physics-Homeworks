@@ -1,0 +1,72 @@
+<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+<script type="text/javascript">
+LatexIT.add('p',true);
+</script>
+
+<h1>PH 4433/6433 Homework 4, Problem 1</h1>
+
+<p>Mikhail Gaerlan <br>
+30 September 2015</p>
+
+<h2><a href="../hw4.html">Home</a></h2>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>The solution to the ordinary differential equation <br>
+$\displaystyle{m\frac{d^2x}{dt^2}=-kx^{p-1}}$ <br>
+when <em>p</em> = 2 is simple harmonic motion with the equation <br>
+$\displaystyle{x(t)=A\sin\left(\omega _0t+\phi\right),\;\omega _0=\sqrt{k/m}}$ <br>
+This ODE can be solved numerically using various Runge-Kutta methods.</p>
+
+<hr>
+
+<h2>Code</h2>
+
+<p>RK4 &amp; RK2</p>
+
+<ol>
+<li><a href="main.f90">Main</a></li>
+<li><a href="deriv.f90">Deriv</a></li>
+<li><a href="rk4.f90">RK4 &amp; RK2</a></li>
+</ol>
+
+<p><a href="rk45-rtc.f90">RK45</a></p>
+
+<hr>
+
+<h2>Results</h2>
+
+<h3>RK4</h3>
+
+<p><img src="plots/rk4x.png" alt="RK4x" title="">
+<img src="plots/rk4xzoom.png" alt="RK4xzoom" title=""> <br>
+<img src="plots/rk4xp.png" alt="RK4xp" title="">
+<img src="plots/rk4xpzoom.png" alt="RK4xpzoom" title=""> <br>
+<img src="plots/rk4xerr.png" alt="RK4xerr" title="">
+<img src="plots/rk4xperr.png" alt="RK4xperr" title=""></p>
+
+<h3>RK4</h3>
+
+<p><img src="plots/rk2x.png" alt="RK2x" title="">
+<img src="plots/rk2xp.png" alt="RK2xp" title=""> <br>
+<img src="plots/rk2xerr.png" alt="RK2xerr" title="">
+<img src="plots/rk2xperr.png" alt="RK2xperr" title=""></p>
+
+<h3>RK4</h3>
+
+<p><img src="plots/rk45x.png" alt="RK45x" title="">
+<img src="plots/rk45xp.png" alt="RK45xp" title=""> <br>
+<img src="plots/rk45xerr.png" alt="RK45xerr" title="">
+<img src="plots/rk45xperr.png" alt="RK45xperr" title=""></p>
+
+<hr>
+
+<h2>Discussion</h2>
+
+<p>For the RK4 and RK2 method, the error increases as the step size increases.</p>
+
+<p>For the RK45 method, the error increases as the tolerance increases.</p>
+
+<p>For all methods, the error generally increases with time. Also, as the function approaches zero, the relative error becomes skewed when dividing by a number close to zero resulting in asymptotic behavior at the zeros of the function.</p>

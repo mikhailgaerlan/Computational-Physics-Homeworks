@@ -1,0 +1,37 @@
+<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+<script type="text/javascript">
+LatexIT.add('p',true);
+</script>
+
+<h1>PH 4433/6433 Homework 8, Problem 1</h1>
+
+<p>Mikhail Gaerlan <br>
+9 November 2015</p>
+
+<h2><a href="../hw8.html">Home</a></h2>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>The following 10-dimensional integral can be calculated using simple Monte Carlo integration, the "Stone throwing" method: <br>
+$\displaystyle{\int _{-\infty}^\infty dx _1\int _{-\infty}^\infty dx _2\cdots\int _{-\infty}^\infty dx _{10}\;e^{-\frac{1}{2}(x _1^2+x _2^2+\cdots+x _{10}^2)}}$ <br>
+The method may converge faster with importance sampling.</p>
+
+<hr>
+
+<h2><a href="hw8-1.f90">Code</a></h2>
+
+<hr>
+
+<h2>Results</h2>
+
+<p><img src="integ.png" alt="Integral" title="">
+<img src="stderr.png" alt="Standard Error" title="">
+<img src="abserr.png" alt="Absolute Error" title=""></p>
+
+<hr>
+
+<h2>Discussion</h2>
+
+<p>The error decreases with increased $N$. The "Stone throwing" method converges much, much faster with importance sampling than without. Also, the error for the same $N$ with importance sampling is much smaller than without.</p>

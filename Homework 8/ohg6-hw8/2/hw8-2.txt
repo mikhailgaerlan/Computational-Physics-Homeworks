@@ -1,0 +1,4 @@
+ Metropolis finished. Acceptance rate=  0.370490909    
+ Expectation value of <x>=  -1.2002061837514072E-003
+ Expectation value of <x^2>=   1.0004115859334921     
+ Expectation value of <x^4>=   2.9987901253798088     

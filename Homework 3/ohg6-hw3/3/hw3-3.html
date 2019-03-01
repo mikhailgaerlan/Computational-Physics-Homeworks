@@ -1,0 +1,39 @@
+<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+<script type="text/javascript">
+LatexIT.add('p',true);
+</script>
+
+<h1>PH 4433/6433 Homework 3, Problem 3</h1>
+
+<p>Mikhail Gaerlan <br>
+16 September 2015</p>
+
+<h2><a href="../hw3.html">Home</a></h2>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>Calculate the period of a plane pendulum using <br>
+$\displaystyle{T=2\sqrt{\frac{L}{g}}\int^1 _{-1}\frac{dx}{\sqrt{1-x^2}\sqrt{1-k^2x^2}}\text{ where } k=\sin(\theta _0/2).}$ <br>
+The integral can be estimated using Gauss-Chebyshev quadrature using <br>
+$\displaystyle{S=\int^1 _{-1}\frac{F(x)}{\sqrt{1-x^2}}\approx\sum^N _{j=1}W _jF(x _j)\text{ where }x _j=\cos\left(\frac{\pi\left(j-\frac{1}{2}\right)}{N}\right)},\;W _j=\frac{\pi}{N}.}$</p>
+
+<hr>
+
+<h2><a href="hw3-3.f90">Code</a></h2>
+
+<hr>
+
+<h2><a href="hw3-3.txt">Results</a></h2>
+
+<p><img src="t.png" alt="T" title="">
+<img src="tts.png" alt="T/Ts" title=""></p>
+
+<hr>
+
+<h2>Discussion</h2>
+
+<p>$\displaystyle{F(x)=\frac{2}{\sqrt{1-\sin^2(\theta _0/2)x^2}}}$ <br>
+$\text{When }\theta _0&lt;15^\circ\text{, } T/T _s \approx 1.00$ <br>
+$\text{The required }N\text{ increases as }\theta _0\text{ increases.}$</p>
